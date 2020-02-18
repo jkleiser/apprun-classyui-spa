@@ -38,3 +38,5 @@ npm run type-check:watch
 ```shell
 npm install classy-ui@beta
 ```
+
+## A live version may be tested at [surge.sh](http://apprun-classyui-spa.surge.sh/).
