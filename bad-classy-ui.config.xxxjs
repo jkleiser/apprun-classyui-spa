@@ -1,0 +1,11 @@
+module.exports = {
+  variables: ({ colors }) => ({
+    colors: {
+      ...colors,
+      navbkg: "green"
+    },
+    fontFamily: {
+      roboto: "Roboto"
+    }
+  })
+}

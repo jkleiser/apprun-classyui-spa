@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": false,
+    "declarationDir": "dist/types",
+    "declaration": true,
+
+    "target": "es5",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "reactNamespace": "app",
+    "lib": ["dom", "es2015", "es5"],
+    "experimentalDecorators": true,
+
+    "strict": false
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

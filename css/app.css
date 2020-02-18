@@ -1,0 +1,49 @@
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  color: #2d3748; /* gray-800 */
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  padding-top: 4rem;
+}
+#my-app {
+  margin-left: 2rem;
+  max-width: 50rem;
+}
+#top-nav li.active a {
+  color: #1a202c; /* gray-900 */
+}
+a {
+  text-decoration: none;
+}
+a[target="_blank"] {
+  border-bottom: 1px solid #aae;
+}
+a[target="_blank"]::after {
+  content: " ➚";
+  font-size: 0.8em;
+  vertical-align: super;
+}
+div.counter {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+  width: 160px;
+}
+div.counter output {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+  line-height: 1.5;
+  text-align: center;
+  width: 7rem;
+}
+div.counter button {
+  font-size: 1.25rem;
+  cursor: pointer;
+  margin: 4px;
+  width: 3rem;
+}

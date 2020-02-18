@@ -1,0 +1,43 @@
+{
+  "name": "apprun-classyui-spa",
+  "version": "1.0.0",
+  "description": "A sample setup using Webpack and Babel to build an AppRun/Classy-UI SPA, using TypeScript for type-checking.",
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "webpack --mode=production",
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack -p --mode production"
+  },
+  "author": {
+    "name": "Jon K.",
+    "email": "jon.kleiser@icloud.com"
+  },
+  "main": "dist/bundle.js",
+  "types": "dist/types/index.d.ts",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "7.8.3",
+    "babel-loader": "^8.0.6",
+    "fork-ts-checker-webpack-plugin": "4.0.1",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "resolutions": {
+    "terser": "3.14.1"
+  },
+  "dependencies": {
+    "apprun": "^1.22.2",
+    "classy-ui": "^3.0.5",
+    "css-loader": "^3.4.2",
+    "style-loader": "^1.1.3"
+  }
+}
