@@ -7,7 +7,7 @@ export default class AboutComponent extends Component {
   view = (state) => {
     return <div class="appruninfo">
       <h1 class={ui.h1}>AppRun</h1>
-      <p><a href="https://apprun.js.org/" target="_blank">AppRun</a> is a JavaScript library for building reliable, high-performance web applications using the Elm inspired Architecture, events, and components.</p>
+      <p><a href="https://apprun.js.org/" target="_blank">AppRun</a> is a JavaScript library for building reliable, high-performance web applications using the <a href="https://elm-lang.org" target="_blank">Elm</a> inspired architecture, events, and components.</p>
       <h2 class={ui.h2}>AppRun Benefits</h2>
       <ul>
         <li>Write less code</li>
@@ -19,8 +19,8 @@ export default class AboutComponent extends Component {
       <p>AppRun supports the Redux DevTools Extension. To use the devtools, install the <a href="https://github.com/zalmoxisus/redux-devtools-extension" target="_blank">Redux DevTools Extension</a>. You can monitor the events and states in the devtools.</p>
       <div class="counter">
         <output value={state.count} />
-        <button $onclick="-1">-1</button>
-        <button $onclick="+1">+1</button>
+        <button class={ui.button} $onclick="-1">-1</button>
+        <button class={ui.button} $onclick="+1">+1</button>
       </div>
     </div>
   }

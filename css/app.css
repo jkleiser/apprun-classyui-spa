@@ -10,6 +10,7 @@ body {
 }
 #my-app {
   margin-left: 2rem;
+  margin-right: 1rem;
   max-width: 50rem;
 }
 #top-nav li.active a {
