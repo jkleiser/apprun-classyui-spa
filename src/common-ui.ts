@@ -14,6 +14,10 @@ export const ui = {
     "user-select-none",
     hover(
       "background-color-green-200"
+/*
+  info re. hover on iOS touch screens:
+  https://www.prowebdesign.ro/how-to-deal-with-hover-on-touch-screen-devices/
+*/
     ),
     active(
       "color-blue-700"
