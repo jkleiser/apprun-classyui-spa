@@ -2,6 +2,7 @@ import { c } from "classy-ui";
 
 export const ui = {
   button: c(
+    "border-style-solid",
     "border-color-gray-600",
     "border-width-1",
     "border-radius-md",

@@ -6,7 +6,8 @@ export const NavBar = ({ id, label }, children) => {
     "position-fixed",
     "top-0",
     "width-full",
-    "border-bottom-width-2",
+    "border-bottom-style-solid",
+    "border-bottom-width-1",
     "border-bottom-color-gray-500"
   );
   const navClass = c(
