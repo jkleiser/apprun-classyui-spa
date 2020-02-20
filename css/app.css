@@ -8,11 +8,6 @@ body {
   line-height: 1.5;
   padding-top: 4rem;
 }
-#my-app {
-  margin-left: 2rem;
-  margin-right: 1rem;
-  max-width: 50rem;
-}
 #top-nav li.active a {
   color: #1a202c; /* gray-900 */
 }
@@ -23,12 +18,12 @@ a[target="_blank"] {
   border-bottom: 1px solid #aae;
 }
 a[target="_blank"]::after {
-  content: " ➚";
+  content: " ➚";  /* char before ➚ should be a &nbsp; */
   font-size: 0.8em;
   vertical-align: super;
 }
 div.counter {
-  border: 1px solid #ccc;
+  border: 1px solid #cbd5e0; /* gray-400 */
   padding: 8px;
   text-align: center;
   width: 160px;
@@ -46,5 +41,4 @@ div.counter button {
   font-size: 1.25rem;
   cursor: pointer;
   margin: 4px;
-  width: 3rem;
 }

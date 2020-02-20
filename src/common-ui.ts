@@ -1,4 +1,4 @@
-import { c } from "classy-ui";
+import { c, active, hover } from "classy-ui";
 
 export const ui = {
   button: c(
@@ -7,9 +7,17 @@ export const ui = {
     "border-width-1",
     "border-radius-md",
     "background-color-gray-100",
+    "padding-left-3",
+    "padding-right-3",
     "text-align-center",
     "vertical-align-middle",
-    "user-select-none"
+    "user-select-none",
+    hover(
+      "background-color-green-200"
+    ),
+    active(
+      "color-blue-700"
+    )
   ),
   h1: c(
     "font-size-3xl",

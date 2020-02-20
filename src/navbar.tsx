@@ -1,5 +1,5 @@
 import app from "apprun";
-import { c } from "classy-ui";
+import { c, sm } from "classy-ui";
 
 export const NavBar = ({ id, label }, children) => {
   const navbarFixedTop = c(
@@ -19,6 +19,10 @@ export const NavBar = ({ id, label }, children) => {
     "padding-right-4",
     "padding-bottom-1",
     "padding-left-8",
+    sm(
+      "padding-right-2",
+      "padding-left-4"
+    ),
     "z-index-10"
   );
   const aClass = c(
