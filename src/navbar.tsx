@@ -1,45 +1,43 @@
 import app from "apprun";
-import { c, sm } from "classy-ui";
+import { compose, tokens } from "classy-ui";
 
 export const NavBar = ({ id, label }, children) => {
-  const navbarFixedTop = c(
-    "position-fixed",
-    "top-0",
-    "width-full",
-    "border-bottom-style-solid",
-    "border-bottom-width-1",
-    "border-bottom-color-gray-500"
+  const navbarFixedTop = compose(
+    tokens.position.FIXED,
+    tokens.top.NONE,
+    tokens.width.FULL,
+    tokens.borderBottomStyle.SOLID,
+    tokens.borderBottomWidth.WIDTH_1,
+    tokens.borderBottomColor.GRAY_500
   );
-  const navClass = c(
+  const navClass = compose(
     navbarFixedTop,
-    "display-flex",
-    "align-items-center",
-    "background-color-gray-200",
-    "padding-top-1",
-    "padding-right-4",
-    "padding-bottom-1",
-    "padding-left-8",
-    sm(
-      "padding-right-2",
-      "padding-left-4"
-    ),
-    "z-index-10"
+    tokens.display.FLEX,
+    tokens.alignItems.CENTER,
+    tokens.backgroundColor.GRAY_200,
+    tokens.paddingTop.SPACING_01,
+    tokens.paddingRight.SPACING_04,
+    tokens.paddingRight.SPACING_02.sm,
+    tokens.paddingBottom.SPACING_01,
+    tokens.paddingLeft.SPACING_08,
+    tokens.paddingLeft.SPACING_04.sm,
+    tokens.zIndex.Z_10
   );
-  const aClass = c(
-    "display-inline-block",
-    "color-gray-800",
-    "font-size-2xl",
-    "text-decoration-none",
-    "whitespace-no-wrap",
-    "padding-right-2"
+  const aClass = compose(
+    tokens.display.INLINE_BLOCK,
+    tokens.color.GRAY_800,
+    tokens.fontSize.EXTRA_LARGE_2,
+    tokens.textDecorationLine.NONE,
+    tokens.whitespace.NO_WRAP,
+    tokens.paddingRight.SPACING_02
   );
-  const ulClass = c(
-    "display-flex",
-    "flex-direction-row",
-    "list-style-type-none",
-    "padding-left-0",
-    "margin-top-0",
-    "margin-bottom-0"
+  const ulClass = compose(
+    tokens.display.FLEX,
+    tokens.flexDirection.ROW,
+    tokens.listStyleType.NONE,
+    tokens.paddingLeft.NONE,
+    tokens.marginTop.NONE,
+    tokens.marginBottom.NONE
   );
   return <nav id={id} class={navClass}>
     <a class={aClass} href="#">{label}</a>
@@ -51,15 +49,15 @@ export const NavBar = ({ id, label }, children) => {
 
 export const NavItem = (props) => {
   const { label, href } = props;
-  const aClass = c(
-    "display-block",
-    "color-gray-600",
-    "font-family-roboto",
-    "text-decoration-none",
-    "padding-top-2",
-    "padding-right-2",
-    "padding-bottom-2",
-    "padding-left-2"
+  const aClass = compose(
+    tokens.display.BLOCK,
+    tokens.color.GRAY_600,
+    //"font-family-roboto",
+    tokens.textDecorationLine.NONE,
+    tokens.paddingTop.SPACING_02,
+    tokens.paddingRight.SPACING_02,
+    tokens.paddingBottom.SPACING_02,
+    tokens.paddingLeft.SPACING_02
   );
   return <li class={props.active ? "active" : null}>
     <a class={aClass} href={href}>{label}</a>
