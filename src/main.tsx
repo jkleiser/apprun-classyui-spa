@@ -3,9 +3,11 @@ import { compose, tokens } from "classy-ui";
 import { NavBar, NavItem } from "./navbar";
 
 // Is this done right? See https://classy-ui.io/install/webpack, "Production"
+/*
 if (process.env.NODE_ENV === "production") {
   require("classy-ui/styles.css");
 }
+*/
 
 // Removing and adding "active" class on <li> elements in the NavBar.
 // The reason for this solution is that the App function below will only be called once.
