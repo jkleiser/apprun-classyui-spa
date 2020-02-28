@@ -14,9 +14,6 @@ body {
 a {
   text-decoration: none;
 }
-a[target="_blank"] {
-  border-bottom: 1px solid #aae;
-}
 a[target="_blank"]::after {
   content: " ➚";  /* char before ➚ should be a &nbsp; */
   font-size: 0.8em;
