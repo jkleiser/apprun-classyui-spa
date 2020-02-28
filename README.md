@@ -12,6 +12,8 @@ npm start
 
 ## Building the repo
 
+If you want Classy-UI to shorten all CSS classnames, group media queries and themes, to create a highly optimized bundle, make sure that you have `NODE_ENV=production`. Then you do
+
 ```shell
 npm run build
 ```
