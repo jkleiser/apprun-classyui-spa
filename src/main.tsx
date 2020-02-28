@@ -2,13 +2,6 @@ import app from "apprun";
 import { compose, tokens } from "classy-ui";
 import { NavBar, NavItem } from "./navbar";
 
-// Is this done right? See https://classy-ui.io/install/webpack, "Production"
-/*
-if (process.env.NODE_ENV === "production") {
-  require("classy-ui/styles.css");
-}
-*/
-
 // Removing and adding "active" class on <li> elements in the NavBar.
 // The reason for this solution is that the App function below will only be called once.
 app.on("//", (route) => {
@@ -19,12 +12,12 @@ app.on("//", (route) => {
 })
 
 const appContainer = compose(
-  tokens.marginLeft.SPACING_08,
-  tokens.marginLeft.SPACING_04.sm,
-  tokens.marginRight.SPACING_04,
-  tokens.marginRight.SPACING_02.sm,
-  tokens.marginBottom.SPACING_04,
-  tokens.maxWidth.WIDTH_07
+  tokens.marginLeft.SPACING_8,
+  tokens.marginLeft.SPACING_4.sm,
+  tokens.marginRight.SPACING_4,
+  tokens.marginRight.SPACING_2.sm,
+  tokens.marginBottom.SPACING_4,
+  tokens.maxWidth.WIDTH_7
 );
 
 const App = () => <div class="container">

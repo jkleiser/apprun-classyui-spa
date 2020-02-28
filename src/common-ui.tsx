@@ -14,21 +14,21 @@ export const ui = {
   https://www.prowebdesign.ro/how-to-deal-with-hover-on-touch-screen-devices/
 */
     tokens.color.BLUE_700.active,
-    tokens.paddingLeft.SPACING_03,
-    tokens.paddingRight.SPACING_03,
+    tokens.paddingLeft.SPACING_3,
+    tokens.paddingRight.SPACING_3,
     tokens.textAlign.CENTER,
     tokens.verticalAlign.MIDDLE,
     tokens.userSelect.NONE
   ),
   h1: compose(
     tokens.fontSize.EXTRA_LARGE_3,
-    tokens.marginTop.SPACING_01,
-    tokens.marginBottom.SPACING_04
+    tokens.marginTop.SPACING_1,
+    tokens.marginBottom.SPACING_4
   ),
   h2: compose(
     tokens.fontSize.EXTRA_LARGE_2,
-    tokens.marginTop.SPACING_02,
-    tokens.marginBottom.SPACING_02
+    tokens.marginTop.SPACING_2,
+    tokens.marginBottom.SPACING_2
   )
 };
 

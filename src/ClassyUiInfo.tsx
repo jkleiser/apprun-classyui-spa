@@ -7,8 +7,9 @@ export default class AboutComponent extends Component {
   view = (state) => {
     return <div class="classyuiinfo">
       <h1 class={ui.h1}>{state.page}</h1>
-      <p><Aext href="https://classy-ui.io">Classy-UI</Aext> is an atomic design system inspired by the wonderful <Aext href="https://tailwindcss.com">Tailwindcss</Aext>. Tailwindcss is a classnames abstraction over CSS properties that gives you a consistent set of utilities to design your application. This abstraction does not only make your design consistent, but in combination with Classy-UI it also allows other benefits not possible when defining your design with CSS properties.</p>
+      <p><Aext href="https://classy-ui.io">Classy-UI</Aext> is CSS properties abstracted to design tokens. This abstraction does not only make your design consistent, but also discoverable and documented at your fingertips in the IDE, if your IDE has TypeScript Language Server support.</p>
       <p>Classy-UI is a <Aext href="https://babeljs.io">Babel</Aext>-plugin.</p>
+      <p>Classy-UI was originally inspired by <Aext href="https://tailwindcss.com">Tailwindcss</Aext>.</p>
     </div>
   }
 

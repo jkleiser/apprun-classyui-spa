@@ -15,12 +15,12 @@ export const NavBar = ({ id, label }, children) => {
     tokens.display.FLEX,
     tokens.alignItems.CENTER,
     tokens.backgroundColor.GRAY_200,
-    tokens.paddingTop.SPACING_01,
-    tokens.paddingRight.SPACING_04,
-    tokens.paddingRight.SPACING_02.sm,
-    tokens.paddingBottom.SPACING_01,
-    tokens.paddingLeft.SPACING_08,
-    tokens.paddingLeft.SPACING_04.sm,
+    tokens.paddingTop.SPACING_1,
+    tokens.paddingRight.SPACING_4,
+    tokens.paddingRight.SPACING_2.sm,
+    tokens.paddingBottom.SPACING_1,
+    tokens.paddingLeft.SPACING_8,
+    tokens.paddingLeft.SPACING_4.sm,
     tokens.zIndex.Z_10
   );
   const aClass = compose(
@@ -29,7 +29,7 @@ export const NavBar = ({ id, label }, children) => {
     tokens.fontSize.EXTRA_LARGE_2,
     tokens.textDecorationLine.NONE,
     tokens.whitespace.NO_WRAP,
-    tokens.paddingRight.SPACING_02
+    tokens.paddingRight.SPACING_2
   );
   const ulClass = compose(
     tokens.display.FLEX,
@@ -54,10 +54,10 @@ export const NavItem = (props) => {
     tokens.color.GRAY_600,
     //"font-family-roboto",
     tokens.textDecorationLine.NONE,
-    tokens.paddingTop.SPACING_02,
-    tokens.paddingRight.SPACING_02,
-    tokens.paddingBottom.SPACING_02,
-    tokens.paddingLeft.SPACING_02
+    tokens.paddingTop.SPACING_2,
+    tokens.paddingRight.SPACING_2,
+    tokens.paddingBottom.SPACING_2,
+    tokens.paddingLeft.SPACING_2
   );
   return <li class={props.active ? "active" : null}>
     <a class={aClass} href={href}>{label}</a>

@@ -36,7 +36,7 @@
   },
   "dependencies": {
     "apprun": "^1.22.2",
-    "classy-ui": "^5.0.2",
+    "classy-ui": "^6.0.1",
     "css-loader": "^3.4.2",
     "style-loader": "^1.1.3"
   }
