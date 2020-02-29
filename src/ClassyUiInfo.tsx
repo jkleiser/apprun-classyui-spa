@@ -1,5 +1,7 @@
 import app, { Component } from "apprun";
-import { ui, Aext, bgCol } from "./common-ui";
+import { ui, Aext } from "./common-ui";
+import { ColorTable } from "./colors";
+import { compose, tokens } from "classy-ui";
 
 export default class AboutComponent extends Component {
   state = { page: "Classy-UI" };
@@ -19,39 +21,8 @@ export default class AboutComponent extends Component {
       </ul>
       
       <h2 class={ui.h2}>Just a few colors</h2>
-      <p>Classy-UI was originally inspired by <Aext href="https://tailwindcss.com">Tailwindcss</Aext>, and therefore has the same color palette. Tailwind’s background colors can be seen <Aext href="https://tailwindcss.com/docs/background-color/">over here</Aext>. Here is a very tiny subset:</p>
-      <table>
-        <tr><th>GRAY</th>
-          <td class={bgCol.gray[200]}>200</td>
-          <td class={bgCol.gray[400]}>400</td>
-          <td class={bgCol.gray[600]}>600</td>
-          <td class={bgCol.gray[800]}>800</td>
-        </tr>
-        <tr><th>RED</th>
-          <td class={bgCol.red[200]}>200</td>
-          <td class={bgCol.red[400]}>400</td>
-          <td class={bgCol.red[600]}>600</td>
-          <td class={bgCol.red[800]}>800</td>
-        </tr>
-        <tr><th>ORANGE</th>
-          <td class={bgCol.orange[200]}>200</td>
-          <td class={bgCol.orange[400]}>400</td>
-          <td class={bgCol.orange[600]}>600</td>
-          <td class={bgCol.orange[800]}>800</td>
-        </tr>
-        <tr><th>YELLOW</th>
-          <td class={bgCol.yellow[200]}>200</td>
-          <td class={bgCol.yellow[400]}>400</td>
-          <td class={bgCol.yellow[600]}>600</td>
-          <td class={bgCol.yellow[800]}>800</td>
-        </tr>
-        <tr><th>GREEN</th>
-          <td class={bgCol.green[200]}>200</td>
-          <td class={bgCol.green[400]}>400</td>
-          <td class={bgCol.green[600]}>600</td>
-          <td class={bgCol.green[800]}>800</td>
-        </tr>
-      </table>
+      <p>Classy-UI was originally inspired by <Aext href="https://tailwindcss.com">Tailwindcss</Aext>, and therefore has the same color palette. Tailwind’s background colors can be seen <Aext href="https://tailwindcss.com/docs/background-color/">over here</Aext>. Here is a small subset of the Classy-UI palette:</p>
+      <ColorTable class={compose(tokens.marginLeft.SPACING_5)} />
     </div>
   }
 
