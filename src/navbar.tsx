@@ -1,5 +1,5 @@
 import app from "apprun";
-import { compose, tokens } from "classy-ui";
+import { compose, mobile, tokens } from "classy-ui";
 
 export const NavBar = ({ id, label }, children) => {
   const navbarFixedTop = compose(
@@ -17,10 +17,10 @@ export const NavBar = ({ id, label }, children) => {
     tokens.backgroundColor.GRAY_200,
     tokens.paddingTop.SPACING_1,
     tokens.paddingRight.SPACING_4,
-    tokens.paddingRight.SPACING_2.mobile,
+    mobile(tokens.paddingRight.SPACING_2),
     tokens.paddingBottom.SPACING_1,
     tokens.paddingLeft.SPACING_8,
-    tokens.paddingLeft.SPACING_4.mobile,
+    mobile(tokens.paddingLeft.SPACING_4),
     tokens.zIndex.Z_10
   );
   const aClass = compose(

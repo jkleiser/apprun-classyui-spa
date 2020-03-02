@@ -1,5 +1,5 @@
 import app from "apprun";
-import { compose, tokens } from "classy-ui";
+import { compose, mobile, tokens } from "classy-ui";
 import { NavBar, NavItem } from "./navbar";
 
 // Removing and adding "active" class on <li> elements in the NavBar.
@@ -13,9 +13,9 @@ app.on("//", (route) => {
 
 const appContainer = compose(
   tokens.marginLeft.SPACING_8,
-  tokens.marginLeft.SPACING_4.mobile,
+  mobile(tokens.marginLeft.SPACING_4),
   tokens.marginRight.SPACING_4,
-  tokens.marginRight.SPACING_2.mobile,
+  mobile(tokens.marginRight.SPACING_2),
   tokens.marginBottom.SPACING_4,
   tokens.maxWidth.WIDTH_7
 );
