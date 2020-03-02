@@ -8,7 +8,7 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "webpack --mode=production",
     "start": "webpack-dev-server --mode development",
-    "build": "webpack -p --mode production"
+    "build": "NODE_ENV=production webpack -p --mode production"
   },
   "author": {
     "name": "Jon K.",
