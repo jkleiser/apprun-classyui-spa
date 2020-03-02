@@ -40,7 +40,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'index.html',
       // Expose a production option to the template 
-      production: process.env.NODE_ENV === 'production'
+      production: process.env.NODE_ENV === 'production',
+      favicon: 'favicon.ico'
     })
   ]
 };

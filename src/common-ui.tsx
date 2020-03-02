@@ -40,5 +40,18 @@ export const Aext = (props, children) => {
     tokens.borderBottomWidth.WIDTH_1,
     tokens.borderBottomColor.INDIGO_600
   );
-  return <a class={aClass} href={href} target="_blank" rel="noopener noreferrer">{children}</a>
+  const extClass: string = compose(
+    tokens.fontSize.SMALL,
+    tokens.verticalAlign.TOP  // better: SUPER
+  );
+  return <a class={aClass} href={href} target="_blank"
+    rel="noopener noreferrer">{children}<span class={extClass}>&nbsp;➚</span></a>
+}
+
+export const Aint = (props, children) => {
+  const { href } = props;
+  const aClass: string = compose(
+    tokens.textDecorationLine.NONE
+  );
+  return <a class={aClass} href={href}>{children}</a>
 }

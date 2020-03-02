@@ -13,9 +13,9 @@ app.on("//", (route) => {
 
 const appContainer = compose(
   tokens.marginLeft.SPACING_8,
-  tokens.marginLeft.SPACING_4.sm,
+  tokens.marginLeft.SPACING_4.mobile,
   tokens.marginRight.SPACING_4,
-  tokens.marginRight.SPACING_2.sm,
+  tokens.marginRight.SPACING_2.mobile,
   tokens.marginBottom.SPACING_4,
   tokens.maxWidth.WIDTH_7
 );

@@ -6,11 +6,26 @@
   <meta name="generator" content="BBEdit 13.0" />
   <title>AppRun + Classy-UI</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto" />
-  <link rel="stylesheet" type="text/css" href="./css/app.css" />
-  <link rel="stylesheet" type="text/css" href="./dist/classy-ui.css" />
+  <% if (htmlWebpackPlugin.options.production){ %>
+    <link rel="stylesheet" href="/classy-ui.css" />
+  <% } %>
+  <style>
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  color: #2d3748; /* gray-800 */
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.5;
+  padding-top: 4rem;
+}
+#top-nav li.active a {
+  color: #1a202c; /* gray-900 */
+}
+  </style>
 </head>
 <body>
   <div id="main"></div>
-  <script src="./dist/app.js"></script>
 </body>
 </html>

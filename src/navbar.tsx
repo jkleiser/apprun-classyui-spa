@@ -17,10 +17,10 @@ export const NavBar = ({ id, label }, children) => {
     tokens.backgroundColor.GRAY_200,
     tokens.paddingTop.SPACING_1,
     tokens.paddingRight.SPACING_4,
-    tokens.paddingRight.SPACING_2.sm,
+    tokens.paddingRight.SPACING_2.mobile,
     tokens.paddingBottom.SPACING_1,
     tokens.paddingLeft.SPACING_8,
-    tokens.paddingLeft.SPACING_4.sm,
+    tokens.paddingLeft.SPACING_4.mobile,
     tokens.zIndex.Z_10
   );
   const aClass = compose(

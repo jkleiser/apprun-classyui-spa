@@ -70,11 +70,12 @@ export const ColorTable = (props) => {
   const names = ["GRAY", "RED", "ORANGE", "YELLOW", "GREEN", "TEAL", "BLUE", "INDIGO", "PURPLE", "PINK"];
   const nums = [200, 400, 600, 800];
   const tdClass = (varClass): string => c(
+    varClass,
     t.paddingTop.SPACING_2,
     t.paddingRight.SPACING_3,
     t.paddingBottom.SPACING_2,
     t.paddingLeft.SPACING_3
-  ) + " " + varClass;
+  );
   
   return <table class={tableClass}>{names.map(name =>
       <tr>
