@@ -12,11 +12,11 @@ export default BundleVersion;
 
 module.exports = {
   entry: {
-    'dist/app': './src/main.tsx',
+    'app': './src/main.tsx',
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname)
+    path: path.resolve(__dirname, 'dist')
   },
 
   resolve: {
@@ -29,11 +29,7 @@ module.exports = {
         test: /\.(ts|js)x?$/,
         exclude: /(node_modules)/,
         use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-            plugins: [['classy-ui/plugin', { output: 'dist' }]]
-          }
+          loader: 'babel-loader'
         }
       }
     ]
