@@ -7,7 +7,6 @@ export default class AboutComponent extends Component {
   state = { page: "Classy-UI" };
 
   view = (state) => {
-    //console.log(compose(tokens.utils.SCREEN_READER));
     return <div class="classyuiinfo">
       <h1 class={ui.h1}>{state.page}</h1>
       <p><Aext href="https://classy-ui.io">Classy-UI</Aext> is CSS properties abstracted to design tokens. This abstraction does not only make your design consistent, but also discoverable and documented at your fingertips in the IDE, if your IDE has TypeScript Language Server support.</p>
@@ -24,7 +23,7 @@ export default class AboutComponent extends Component {
       <h2 class={ui.h2}>Just a few colors</h2>
       <p>Classy-UI was originally inspired by <Aext href="https://tailwindcss.com">Tailwindcss</Aext>, and therefore has the same color palette. Tailwind’s background colors can be seen <Aext href="https://tailwindcss.com/docs/background-color/">over here</Aext>. Here is a small subset of the Classy-UI palette:</p>
       <ColorTable class={compose(tokens.marginLeft.SPACING_5)} />
-      <p class={compose(tokens.display.HIDDEN)}>TODO: This line shall only be presentet when a screenreader is used!</p>
+      <p class={compose(tokens.utils.SCREEN_READER)}>This line shall only be presentet when a screenreader is used!</p>
     </div>
   }
 
