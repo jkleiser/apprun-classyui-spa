@@ -2,19 +2,26 @@ import app, { Component } from "apprun";
 import { ui, Aext } from "./common-ui";
 import { compose, tokens } from "classy-ui";
 
-const counterClass = compose(
+const demoClass = (varClass?): string => compose(
+  varClass || "",
   tokens.borderStyle.SOLID,
   tokens.borderColor.GRAY_400,
   tokens.borderWidth.WIDTH_1,
   tokens.padding.SPACING_2,
   tokens.textAlign.CENTER,
-  tokens.width.SPACING_40
+  tokens.marginLeft.SPACING_5
+);
+
+const inputClass = compose(
+  tokens.fontSize.LARGE,
+  tokens.padding.SPACING_1,
+  tokens.placeholder.GRAY_500,
+  tokens.width.SPACING_56
 );
 
 const outputClass = compose(
   tokens.display.BLOCK,
-  tokens.marginLeft.AUTO,
-  tokens.marginRight.AUTO,
+  tokens.marginHorizontal.AUTO,
   tokens.fontSize.EXTRA_LARGE_3,
   tokens.lineHeight.RELAXED,
   tokens.textAlign.CENTER,
@@ -29,7 +36,7 @@ const btnClass = compose(
 );
 
 export default class AboutComponent extends Component {
-  state = { count: 0 };
+  state = { count: 0, sport: "" };
 
   view = (state) => {
     return <div class="appruninfo">
@@ -44,11 +51,23 @@ export default class AboutComponent extends Component {
         <li>Run side-by-side with jQuery, chartjs, D3, lit-html ...</li>
       </ul>
       <p>AppRun supports the Redux DevTools Extension. To use the devtools, install the <Aext href="https://github.com/zalmoxisus/redux-devtools-extension">Redux DevTools Extension</Aext>. You can monitor the events and states in the devtools.</p>
-      <div class={counterClass}>
-        <output class={outputClass} value={state.count} />
-        <button class={btnClass} $onclick="-1">-1</button>
-        <button class={btnClass} $onclick="+1">+1</button>
+      
+      <div class={compose(tokens.display.FLEX)}>
+        <div class={demoClass(tokens.width.SPACING_40)}>
+          <output class={outputClass} value={state.count} />
+          <button class={btnClass} $onclick="-1">-1</button>
+          <button class={btnClass} $onclick="+1">+1</button>
+        </div>
+        <div class={demoClass(tokens.paddingTop.SPACING_4)}>
+          <input class={inputClass} value={state.sport}
+            placeholder="type your favourite sport" $oninput="sportEdit" />
+          {state.sport &&
+            <p class={compose(tokens.marginVertical.SPACING_2)}>
+              That text contains {state.sport.length} char(s)
+            </p>}
+        </div>
       </div>
+      
     </div>
   }
 
@@ -61,6 +80,10 @@ export default class AboutComponent extends Component {
     },
     "+1": state => {
       return { ...state, count: state.count + 1 };
+    },
+    "sportEdit": (state, evt) => {
+      const sport = evt.target.value;
+      return { ...state, sport };
     }
   }
 }

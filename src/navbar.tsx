@@ -36,8 +36,7 @@ export const NavBar = ({ id, label }, children) => {
     tokens.flexDirection.ROW,
     tokens.listStyleType.NONE,
     tokens.paddingLeft.NONE,
-    tokens.marginTop.NONE,
-    tokens.marginBottom.NONE
+    tokens.marginVertical.NONE  // both marginTop and marginBottom
   );
   return <nav id={id} class={navClass}>
     <a class={aClass} href="#">{label}</a>
@@ -54,10 +53,8 @@ export const NavItem = (props) => {
     tokens.color.GRAY_600,
     //"font-family-roboto",
     tokens.textDecorationLine.NONE,
-    tokens.paddingTop.SPACING_2,
-    tokens.paddingRight.SPACING_2,
-    tokens.paddingBottom.SPACING_2,
-    tokens.paddingLeft.SPACING_2
+    tokens.paddingHorizontal.SPACING_2, // both paddingLeft and paddingRight
+    tokens.paddingVertical.SPACING_2  // both paddingTop and paddingBottom
   );
   return <li class={props.active ? "active" : null}>
     <a class={aClass} href={href}>{label}</a>

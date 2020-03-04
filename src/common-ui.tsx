@@ -14,8 +14,7 @@ export const ui = {
   https://www.prowebdesign.ro/how-to-deal-with-hover-on-touch-screen-devices/
 */
     tokens.color.BLUE_700.active,
-    tokens.paddingLeft.SPACING_3,
-    tokens.paddingRight.SPACING_3,
+    tokens.paddingHorizontal.SPACING_3, // both paddingLeft and paddingRight
     tokens.textAlign.CENTER,
     tokens.verticalAlign.MIDDLE,
     tokens.userSelect.NONE
