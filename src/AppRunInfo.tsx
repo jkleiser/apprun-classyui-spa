@@ -1,6 +1,11 @@
 import app, { Component } from "apprun";
 import { ui, Aext } from "./common-ui";
-import { compose, tokens } from "classy-ui";
+import { compose, mobile, tokens } from "classy-ui";
+
+const demoWrapClass = compose(
+  tokens.display.FLEX,
+  mobile(tokens.display.INLINE_BLOCK)
+);
 
 const demoClass = (varClass?): string => compose(
   varClass || "",
@@ -9,7 +14,8 @@ const demoClass = (varClass?): string => compose(
   tokens.borderWidth.WIDTH_1,
   tokens.padding.SPACING_2,
   tokens.textAlign.CENTER,
-  tokens.marginLeft.SPACING_5
+  tokens.marginLeft.SPACING_5,
+  mobile(tokens.marginBottom.SPACING_2)
 );
 
 const inputClass = compose(
@@ -52,7 +58,7 @@ export default class AboutComponent extends Component {
       </ul>
       <p>AppRun supports the Redux DevTools Extension. To use the devtools, install the <Aext href="https://github.com/zalmoxisus/redux-devtools-extension">Redux DevTools Extension</Aext>. You can monitor the events and states in the devtools.</p>
       
-      <div class={compose(tokens.display.FLEX)}>
+      <div class={demoWrapClass}>
         <div class={demoClass(tokens.width.SPACING_40)}>
           <output class={outputClass} value={state.count} />
           <button class={btnClass} $onclick="-1">-1</button>

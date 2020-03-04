@@ -27,6 +27,7 @@ export const NavBar = ({ id, label }, children) => {
     tokens.display.INLINE_BLOCK,
     tokens.color.GRAY_800,
     tokens.fontSize.EXTRA_LARGE_2,
+    mobile(tokens.fontSize.EXTRA_LARGE),
     tokens.textDecorationLine.NONE,
     tokens.whitespace.NO_WRAP,
     tokens.paddingRight.SPACING_2
