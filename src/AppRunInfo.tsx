@@ -1,44 +1,45 @@
 import app, { Component } from "apprun";
 import { ui, Aext } from "./common-ui";
-import { compose, mobile, tokens } from "classy-ui";
+import { compose, tokens } from "classy-ui";
 
 const demoWrapClass = compose(
   tokens.display.FLEX,
-  mobile(tokens.display.INLINE_BLOCK)
+  tokens.flexWrap.WRAP
+  //mobile(tokens.display.INLINE_BLOCK)
 );
 
 const demoClass = (varClass?): string => compose(
   varClass || "",
   tokens.borderStyle.SOLID,
-  tokens.borderColor.GRAY_400,
+  tokens.borderColor.GRAY_40,
   tokens.borderWidth.WIDTH_1,
-  tokens.padding.SPACING_2,
+  tokens.padding.SPACE_20,
   tokens.textAlign.CENTER,
-  tokens.marginLeft.SPACING_5,
-  mobile(tokens.marginBottom.SPACING_2)
+  tokens.marginLeft.SPACE_50,
+  tokens.marginBottom.SPACE_20
 );
 
 const inputClass = compose(
-  tokens.fontSize.LARGE,
-  tokens.padding.SPACING_1,
-  tokens.placeholder.GRAY_500,
-  tokens.width.SPACING_56
+  tokens.fontSize.SIZE_40,
+  tokens.padding.SPACE_10,
+  tokens.placeholder.GRAY_50,
+  tokens.width.SIZE_7
 );
 
 const outputClass = compose(
   tokens.display.BLOCK,
   tokens.marginHorizontal.AUTO,
-  tokens.fontSize.EXTRA_LARGE_3,
-  tokens.lineHeight.RELAXED,
+  tokens.fontSize.SIZE_70,
+  tokens.lineHeight.HEIGHT_40,
   tokens.textAlign.CENTER,
-  tokens.width.SPACING_32
+  //tokens.width.SIZE_4
 );
 
 const btnClass = compose(
   ui.button,
-  tokens.fontSize.EXTRA_LARGE,
+  tokens.fontSize.SIZE_50,
   tokens.cursor.POINTER,
-  tokens.margin.SPACING_1
+  tokens.margin.SPACE_10
 );
 
 export default class AboutComponent extends Component {
@@ -59,16 +60,16 @@ export default class AboutComponent extends Component {
       <p>AppRun supports the Redux DevTools Extension. To use the devtools, install the <Aext href="https://github.com/zalmoxisus/redux-devtools-extension">Redux DevTools Extension</Aext>. You can monitor the events and states in the devtools.</p>
       
       <div class={demoWrapClass}>
-        <div class={demoClass(tokens.width.SPACING_40)}>
+        <div class={demoClass(tokens.paddingHorizontal.SPACE_60)}>
           <output class={outputClass} value={state.count} />
           <button class={btnClass} $onclick="-1">-1</button>
           <button class={btnClass} $onclick="+1">+1</button>
         </div>
-        <div class={demoClass(tokens.paddingTop.SPACING_4)}>
+        <div class={demoClass(tokens.paddingTop.SPACE_40)}>
           <input class={inputClass} value={state.sport}
             placeholder="type your favourite sport" $oninput="sportEdit" />
           {state.sport &&
-            <p class={compose(tokens.marginVertical.SPACING_2)}>
+            <p class={compose(tokens.marginVertical.SPACE_20)}>
               That text contains {state.sport.length} char(s)
             </p>}
         </div>

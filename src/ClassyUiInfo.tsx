@@ -21,8 +21,8 @@ export default class AboutComponent extends Component {
       </ul>
       
       <h2 class={ui.h2}>Just a few colors</h2>
-      <p>Classy-UI was originally inspired by <Aext href="https://tailwindcss.com">Tailwindcss</Aext>, and therefore has the same color palette. Tailwind’s background colors can be seen <Aext href="https://tailwindcss.com/docs/background-color/">over here</Aext>. Here is a small subset of the Classy-UI palette:</p>
-      <ColorTable class={compose(tokens.marginLeft.SPACING_5)} />
+      <p>Classy-UI was originally inspired by <Aext href="https://tailwindcss.com">Tailwindcss</Aext>, and therefore has a similar color palette. Tailwind’s background colors can be seen <Aext href="https://tailwindcss.com/docs/background-color/">over here</Aext>. Here is a small subset of the Classy-UI palette:</p>
+      <ColorTable class={compose(tokens.marginLeft.SPACE_50)} />
       <p class={compose(tokens.utils.SCREEN_READER)}>This line shall only be presentet when a screenreader is used!</p>
     </div>
   }

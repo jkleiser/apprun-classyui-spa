@@ -12,12 +12,12 @@ app.on("//", (route) => {
 })
 
 const appContainer = compose(
-  tokens.marginLeft.SPACING_8,
-  mobile(tokens.marginLeft.SPACING_4),
-  tokens.marginRight.SPACING_4,
-  mobile(tokens.marginRight.SPACING_2),
-  tokens.marginBottom.SPACING_4,
-  tokens.maxWidth.WIDTH_7
+  tokens.marginLeft.SPACE_70,
+  mobile(tokens.marginLeft.SPACE_40),
+  tokens.marginRight.SPACE_40,
+  mobile(tokens.marginRight.SPACE_20),
+  tokens.marginBottom.SPACE_40,
+  tokens.maxWidth.SIZE_70
 );
 
 const App = () => <div class="container">

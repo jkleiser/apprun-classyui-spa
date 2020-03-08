@@ -4,82 +4,82 @@ import { compose, tokens } from "classy-ui";
 // These background colors are arranged as an experiment
 export const bgCol = {
   GRAY: {
-    200: compose(tokens.backgroundColor.GRAY_200),
-    400: compose(tokens.backgroundColor.GRAY_400),
-    600: compose(tokens.backgroundColor.GRAY_600),
-    800: compose(tokens.backgroundColor.GRAY_800)
+    20: compose(tokens.backgroundColor.GRAY_20),
+    40: compose(tokens.backgroundColor.GRAY_40),
+    60: compose(tokens.backgroundColor.GRAY_60),
+    80: compose(tokens.backgroundColor.GRAY_80)
   },
   RED: {
-    200: compose(tokens.backgroundColor.RED_200),
-    400: compose(tokens.backgroundColor.RED_400),
-    600: compose(tokens.backgroundColor.RED_600),
-    800: compose(tokens.backgroundColor.RED_800)
+    20: compose(tokens.backgroundColor.RED_20),
+    40: compose(tokens.backgroundColor.RED_40),
+    60: compose(tokens.backgroundColor.RED_60),
+    80: compose(tokens.backgroundColor.RED_80)
   },
   ORANGE: {
-    200: compose(tokens.backgroundColor.ORANGE_200),
-    400: compose(tokens.backgroundColor.ORANGE_400),
-    600: compose(tokens.backgroundColor.ORANGE_600),
-    800: compose(tokens.backgroundColor.ORANGE_800)
+    20: compose(tokens.backgroundColor.ORANGE_20),
+    40: compose(tokens.backgroundColor.ORANGE_40),
+    60: compose(tokens.backgroundColor.ORANGE_60),
+    80: compose(tokens.backgroundColor.ORANGE_80)
   },
   YELLOW: {
-    200: compose(tokens.backgroundColor.YELLOW_200),
-    400: compose(tokens.backgroundColor.YELLOW_400),
-    600: compose(tokens.backgroundColor.YELLOW_600),
-    800: compose(tokens.backgroundColor.YELLOW_800)
+    20: compose(tokens.backgroundColor.YELLOW_20),
+    40: compose(tokens.backgroundColor.YELLOW_40),
+    60: compose(tokens.backgroundColor.YELLOW_60),
+    80: compose(tokens.backgroundColor.YELLOW_80)
   },
   GREEN: {
-    200: compose(tokens.backgroundColor.GREEN_200),
-    400: compose(tokens.backgroundColor.GREEN_400),
-    600: compose(tokens.backgroundColor.GREEN_600),
-    800: compose(tokens.backgroundColor.GREEN_800)
+    20: compose(tokens.backgroundColor.GREEN_20),
+    40: compose(tokens.backgroundColor.GREEN_40),
+    60: compose(tokens.backgroundColor.GREEN_60),
+    80: compose(tokens.backgroundColor.GREEN_80)
   },
   TEAL: {
-    200: compose(tokens.backgroundColor.TEAL_200),
-    400: compose(tokens.backgroundColor.TEAL_400),
-    600: compose(tokens.backgroundColor.TEAL_600),
-    800: compose(tokens.backgroundColor.TEAL_800)
+    20: compose(tokens.backgroundColor.TEAL_20),
+    40: compose(tokens.backgroundColor.TEAL_40),
+    60: compose(tokens.backgroundColor.TEAL_60),
+    80: compose(tokens.backgroundColor.TEAL_80)
   },
   BLUE: {
-    200: compose(tokens.backgroundColor.BLUE_200),
-    400: compose(tokens.backgroundColor.BLUE_400),
-    600: compose(tokens.backgroundColor.BLUE_600),
-    800: compose(tokens.backgroundColor.BLUE_800)
+    20: compose(tokens.backgroundColor.BLUE_20),
+    40: compose(tokens.backgroundColor.BLUE_40),
+    60: compose(tokens.backgroundColor.BLUE_60),
+    80: compose(tokens.backgroundColor.BLUE_80)
   },
   INDIGO: {
-    200: compose(tokens.backgroundColor.INDIGO_200),
-    400: compose(tokens.backgroundColor.INDIGO_400),
-    600: compose(tokens.backgroundColor.INDIGO_600),
-    800: compose(tokens.backgroundColor.INDIGO_800)
+    20: compose(tokens.backgroundColor.INDIGO_20),
+    40: compose(tokens.backgroundColor.INDIGO_40),
+    60: compose(tokens.backgroundColor.INDIGO_60),
+    80: compose(tokens.backgroundColor.INDIGO_80)
   },
   PURPLE: {
-    200: compose(tokens.backgroundColor.PURPLE_200),
-    400: compose(tokens.backgroundColor.PURPLE_400),
-    600: compose(tokens.backgroundColor.PURPLE_600),
-    800: compose(tokens.backgroundColor.PURPLE_800)
+    20: compose(tokens.backgroundColor.PURPLE_20),
+    40: compose(tokens.backgroundColor.PURPLE_40),
+    60: compose(tokens.backgroundColor.PURPLE_60),
+    80: compose(tokens.backgroundColor.PURPLE_80)
   },
   PINK: {
-    200: compose(tokens.backgroundColor.PINK_200),
-    400: compose(tokens.backgroundColor.PINK_400),
-    600: compose(tokens.backgroundColor.PINK_600),
-    800: compose(tokens.backgroundColor.PINK_800)
+    20: compose(tokens.backgroundColor.PINK_20),
+    40: compose(tokens.backgroundColor.PINK_40),
+    60: compose(tokens.backgroundColor.PINK_60),
+    80: compose(tokens.backgroundColor.PINK_80)
   }
 }
 
 export const ColorTable = (props) => {
   const tableClass = props ? props.class : null;
   const names = ["GRAY", "RED", "ORANGE", "YELLOW", "GREEN", "TEAL", "BLUE", "INDIGO", "PURPLE", "PINK"];
-  const nums = [200, 400, 600, 800];
+  const nums = [20, 40, 60, 80];
   const tdClass = (varClass): string => compose(
     varClass,
-    tokens.paddingTop.SPACING_2,
-    tokens.paddingRight.SPACING_3,
-    tokens.paddingBottom.SPACING_2,
-    tokens.paddingLeft.SPACING_3
+    tokens.paddingTop.SPACE_20,
+    tokens.paddingRight.SPACE_30,
+    tokens.paddingBottom.SPACE_20,
+    tokens.paddingLeft.SPACE_30
   );
   
   return <table class={tableClass}>{names.map(name =>
       <tr>
-        <th class={compose(tokens.textAlign.LEFT, tokens.paddingRight.SPACING_2)}>{name}</th>
+        <th class={compose(tokens.textAlign.LEFT, tokens.paddingRight.SPACE_20)}>{name}</th>
         {nums.map(num => <td class={tdClass(bgCol[name][num])}>{num}</td>)}
       </tr>
     )}
