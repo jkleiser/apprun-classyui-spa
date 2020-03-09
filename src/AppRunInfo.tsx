@@ -5,7 +5,6 @@ import { compose, tokens } from "classy-ui";
 const demoWrapClass = compose(
   tokens.display.FLEX,
   tokens.flexWrap.WRAP
-  //mobile(tokens.display.INLINE_BLOCK)
 );
 
 const demoClass = (varClass?): string => compose(
@@ -16,7 +15,8 @@ const demoClass = (varClass?): string => compose(
   tokens.padding.SPACE_20,
   tokens.textAlign.CENTER,
   tokens.marginLeft.SPACE_50,
-  tokens.marginBottom.SPACE_20
+  tokens.marginBottom.SPACE_20,
+  tokens.minHeight.SIZE_3
 );
 
 const inputClass = compose(
@@ -31,8 +31,7 @@ const outputClass = compose(
   tokens.marginHorizontal.AUTO,
   tokens.fontSize.SIZE_70,
   tokens.lineHeight.HEIGHT_40,
-  tokens.textAlign.CENTER,
-  //tokens.width.SIZE_4
+  tokens.textAlign.CENTER
 );
 
 const btnClass = compose(
