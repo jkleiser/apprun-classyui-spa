@@ -9,6 +9,7 @@
     "noImplicitAny": false,
     "declarationDir": "dist/types",
     "declaration": true,
+    "baseUrl": ".",
 
     "target": "es5",
     "module": "es2015",
