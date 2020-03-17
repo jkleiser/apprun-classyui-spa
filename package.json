@@ -1,6 +1,6 @@
 {
   "name": "apprun-classyui-spa",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A sample setup using Webpack and Babel to build an AppRun/Classy-UI SPA, using TypeScript for type-checking.",
   "scripts": {
     "type-check": "tsc --noEmit",
@@ -28,7 +28,7 @@
     "classy-ui": "^10.2.1",
     "fork-ts-checker-webpack-plugin": "4.0.1",
     "html-webpack-plugin": "^3.2.0",
-    "typescript": "^3.8.2",
+    "typescript": "^3.8.3",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
@@ -37,7 +37,7 @@
     "terser": "3.14.1"
   },
   "dependencies": {
-    "apprun": "^1.22.2",
+    "apprun": "^1.23.1",
     "css-loader": "^3.4.2",
     "style-loader": "^1.1.3"
   }

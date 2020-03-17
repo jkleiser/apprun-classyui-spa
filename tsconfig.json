@@ -11,7 +11,7 @@
     "declaration": true,
     "baseUrl": ".",
 
-    "target": "es5",
+    "target": "es2015",
     "module": "es2015",
     "moduleResolution": "node",
     "jsx": "react",
