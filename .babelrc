@@ -1,6 +1,10 @@
 {
   "presets": [
-    "@babel/env",
+    ["@babel/env", {
+      "targets": {
+        "browsers": "> 5%"
+      }
+    }],
     "@babel/react",
     "@babel/typescript"
   ],
