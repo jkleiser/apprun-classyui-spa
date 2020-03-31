@@ -66,7 +66,7 @@ export default class AboutComponent extends Component {
         class={compose(tokens.marginLeft.SPACE_50, tokens.marginBottom.SPACE_60)} />
       
       <h2 class={ui.h2}>Media queries</h2>
-      <p>Your current screen size group is indicated by dark green letters:</p>
+      <p>Your current screen size class is indicated by dark green letters:</p>
       <ul class={mediaUlClass}>
         <li class={mobileClass}>mobile</li>
         <li class={tabletClass}>tablet</li>
