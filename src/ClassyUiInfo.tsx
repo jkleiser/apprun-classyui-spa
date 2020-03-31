@@ -1,7 +1,47 @@
 import app, { Component } from "apprun";
 import { ui, Aext } from "./common-ui";
 import { ColorTable } from "./colors";
-import { compose, tokens } from "classy-ui";
+import { compose, desktop, laptop, mobile, tablet, tokens } from "classy-ui";
+
+const mediaUlClass = compose(
+  tokens.display.FLEX,
+  tokens.flexDirection.ROW,
+  tokens.listStyleType.NONE,
+  tokens.paddingLeft.SPACE_50,
+  mobile(tokens.paddingLeft.SPACE_0)
+);
+const mediaLiClass = compose(
+  tokens.borderStyle.SOLID,
+  tokens.borderColor.GRAY_50,
+  tokens.borderWidth.WIDTH_1,
+  tokens.borderRadius.RADIUS_20,
+  tokens.fontSize.SIZE_40,
+  tokens.color.GRAY_40,
+  tokens.marginRight.SPACE_10,
+  tokens.paddingHorizontal.SPACE_20
+);
+/*
+const mediaActive = compose(
+  tokens.color.GREEN_80
+);
+TODO: Replace the four 'tokens.color.GREEN_80' below with a composition.
+*/
+const desktopClass = compose(
+  mediaLiClass,
+  desktop(tokens.color.GREEN_80)
+);
+const laptopClass = compose(
+  mediaLiClass,
+  laptop(tokens.color.GREEN_80)
+);
+const mobileClass = compose(
+  mediaLiClass,
+  mobile(tokens.color.GREEN_80)
+);
+const tabletClass = compose(
+  mediaLiClass,
+  tablet(tokens.color.GREEN_80)
+);
 
 export default class AboutComponent extends Component {
   state = { page: "Classy-UI" };
@@ -22,7 +62,18 @@ export default class AboutComponent extends Component {
       
       <h2 class={ui.h2}>Just a few colors</h2>
       <p>Classy-UI was originally inspired by <Aext href="https://tailwindcss.com">Tailwindcss</Aext>, and therefore has a similar color palette. Tailwind’s background colors can be seen <Aext href="https://tailwindcss.com/docs/background-color/">over here</Aext>. Here is a small subset of the Classy-UI palette:</p>
-      <ColorTable class={compose(tokens.marginLeft.SPACE_50)} />
+      <ColorTable
+        class={compose(tokens.marginLeft.SPACE_50, tokens.marginBottom.SPACE_60)} />
+      
+      <h2 class={ui.h2}>Media queries</h2>
+      <p>Your current screen size group is indicated by dark green letters:</p>
+      <ul class={mediaUlClass}>
+        <li class={mobileClass}>mobile</li>
+        <li class={tabletClass}>tablet</li>
+        <li class={laptopClass}>laptop</li>
+        <li class={desktopClass}>desktop</li>
+      </ul>
+      
       <p class={compose(tokens.utils.SCREEN_READER)}>This line shall only be presentet when a screenreader is used!</p>
     </div>
   }
