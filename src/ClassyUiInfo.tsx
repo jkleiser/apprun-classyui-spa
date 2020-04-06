@@ -14,33 +14,34 @@ const mediaLiClass = compose(
   tokens.borderStyle.SOLID,
   tokens.borderColor.GRAY_50,
   tokens.borderWidth.WIDTH_1,
-  tokens.borderRadius.RADIUS_20,
-  tokens.fontSize.SIZE_40,
+  tokens.fontSize.SIZE_30,
   tokens.color.GRAY_40,
   tokens.marginRight.SPACE_10,
   tokens.paddingHorizontal.SPACE_20
 );
+
 /*
-const mediaActive = compose(
-  tokens.color.GREEN_80
+  TODO: If possible, replace the params of the four screen functions below
+  with a "composition value".
+const sizeMatchClass = compose(
+  tokens.color.GREEN_80, tokens.fontWeight.WEIGHT_70
 );
-TODO: Replace the four 'tokens.color.GREEN_80' below with a composition.
 */
 const desktopClass = compose(
   mediaLiClass,
-  desktop(tokens.color.GREEN_80)
+  desktop(tokens.color.GREEN_80, tokens.fontWeight.WEIGHT_70)
 );
 const laptopClass = compose(
   mediaLiClass,
-  laptop(tokens.color.GREEN_80)
+  laptop(tokens.color.GREEN_80, tokens.fontWeight.WEIGHT_70)
 );
 const mobileClass = compose(
   mediaLiClass,
-  mobile(tokens.color.GREEN_80)
+  mobile(tokens.color.GREEN_80, tokens.fontWeight.WEIGHT_70)
 );
 const tabletClass = compose(
   mediaLiClass,
-  tablet(tokens.color.GREEN_80)
+  tablet(tokens.color.GREEN_80, tokens.fontWeight.WEIGHT_70)
 );
 
 export default class AboutComponent extends Component {
@@ -66,7 +67,7 @@ export default class AboutComponent extends Component {
         class={compose(tokens.marginLeft.SPACE_50, tokens.marginBottom.SPACE_60)} />
       
       <h2 class={ui.h2}>Media queries</h2>
-      <p>Your current screen size class is indicated by dark green letters:</p>
+      <p>The width of your current screen/window is less than (within) the max-width given for those classes indicated by bold green letters:</p>
       <ul class={mediaUlClass}>
         <li class={mobileClass}>mobile</li>
         <li class={tabletClass}>tablet</li>

@@ -37,7 +37,7 @@
     "terser": "3.14.1"
   },
   "dependencies": {
-    "apprun": "^2.23.7",
+    "apprun": "^2.23.10",
     "css-loader": "^3.4.2",
     "style-loader": "^1.1.3"
   }
