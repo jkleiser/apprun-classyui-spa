@@ -1,6 +1,8 @@
 # AppRun and Classy-UI
 
-> This experimental sample repository demonstrates how to build a SPA using [AppRun](https://apprun.js.org) and [Classy-UI](https://classy-ui.io), as well as Webpack, Babel and TypeScript. Currently, Classy-UI is still in beta, so there may be some issues that need to be solved.
+> This experimental sample repository demonstrates how to build a SPA using [AppRun](https://apprun.js.org) and [Classy-UI](https://classy-ui.io), as well as Webpack, Babel and TypeScript.
+
+> Unfortunately, Classy-UI is still in beta, and it is not known when/if development will resume.
 
 > It is based on the [webpack-typescript-babel](https://github.com/a-tarasyuk/webpack-typescript-babel) repo.
 
